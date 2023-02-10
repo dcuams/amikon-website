@@ -15,8 +15,8 @@
         -->
     </head>
     <body>
-        <div class = "topnav">
-            <span class = "home"><a href = "index.html">Home</a></span>
+        <div class = "topnav" id = "myTopnav">
+            <span class = "home"><a class = "navfirst" href = "index.html">Home</a></span>
             <a href ="involvement.html" >Get Involved</a>
             <a href = "conv.html"> At The Con</a>
             <a href = "about.html">About</a>
@@ -25,17 +25,26 @@
             <a href = "contact.html"> Contact Us</a>
 			<!-- why are comments so weird in html -->
 			<div class = "social">
-				<a href = "https://www.youtube.com/shorts/NEfs8Ljsmso" > <img src = "img/cringe.png" alt = "Tiktok logo"> </a>
+				<a href = "https://www.youtube.com/shorts/NEfs8Ljsmso" > <img src = "img/tiktok.png" alt = "Tiktok logo"> </a>
 				<a href = "https://www.facebook.com/amikondublin/"> <img src = "img/facebook.png" alt = "Facebook logo"> </a>
 				<a href= "https://twitter.com/AmiKonDublin"> <img src ="img/twitter.png" alt = "Twitter logo"></a>
 				<a href = "https://www.instagram.com/amikondublin/?hl=en"> <img src = "img/instagram.png" alt = "Instagram Logo"> </a> 
 			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<img class = "ico" src = "img/fabar.png" alt = "navbar">
+  </a>
 		</div>
         
         <!-- the body starts here -->
         
 		<div class = "top-spacer"></div>
         <div class = "main">
+            <img src = "img/Body.png" alt = "If you see this somethings gone wrong, contact me ASAP">
+            <img src = "img/Body.png" alt = "If you see this somethings gone wrong, contact me ASAP">
+            <img src = "img/Body.png" alt = "If you see this somethings gone wrong, contact me ASAP">
+            <img src = "img/Body.png" alt = "If you see this somethings gone wrong, contact me ASAP">
+			<!-- all content goes within this div below -->
+			
             <div class = "content">
                 <p>test</p>
                 <p>test2</p>
@@ -46,15 +55,21 @@
                 <!-- I'm going to bed, but i'd suggest making the white box the text is in into more of a background, so it doesn't adjust in size when the text does, and rather than centering the text, start it at the top left and use block formatting so you can also put images next to the text with less issue. -->
                 
             </div>
-            <img src = "img/Body.png" alt = "If you see this somethings gone wrong, contact me ASAP">
-            <img src = "img/Body.png" alt = "If you see this somethings gone wrong, contact me ASAP">
-            <img src = "img/Body.png" alt = "If you see this somethings gone wrong, contact me ASAP">
-            <img src = "img/Body.png" alt = "If you see this somethings gone wrong, contact me ASAP">
 		</div>
         
         <!-- the footer is here -->
         <footer>
             <p>&copy;insert copyright info here</p>
         </footer>
+		<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+		</script>
     </body>
 </html>
