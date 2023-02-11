@@ -1,6 +1,6 @@
 html {
 	background-color:white;
-    background-color: #302b3a
+    background-color: #302b3a;
 }
 
 body {
@@ -24,15 +24,6 @@ body {
 	max-height:37.5px;
 	min-width:100%;
 	
-}
-
-footer {
-	background-color:white;
-	height:7.8vh;
-	max-height:80px;
-	z-index:0;
-    width: 100%;
-    bottom: 0px;
 }
 
 .topnav a:hover{
@@ -117,14 +108,102 @@ a.icon{
 }
 
 div.content {
-	left:calc(50% - 35vmin);
-	top:calc(50% - 32vmin);
+	--width: 70vw;
+	--height: 70vh;
+	
+	border-radius: 25px;
+	left:calc(50% - calc(var(--width)/2));
+	top:calc(50% - calc(var(--height)/2));
 	float:center;
-	width:70vmin;
-	height:70vmin;
-	background-color:white;
+	width:var(--width);
+	height:var(--height);
+	background-color:#ef48e8;
 	z-index:1;
 	position:absolute;
+	overflow:hidden;
+}
+
+div.header {
+	font-size:3vmin;
+	color: white;
+	text-align:center;
+	margin-top:0px;
+	padding:0px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:4vmin;
+	background-color:#302b3a;
+	border-radius:25px;
+	width:10em;
+	height:5ex;
+}
+
+.header h1 {
+	margin-top:1vmin;
+}
+
+textarea {
+  color:white;
+  font-size:3vmin;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:1vw;
+  margin-bottom:1vw;
+  width: 90%;
+  padding:1vw;
+  display:block;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color:#302b3a;
+  resize:none;
+}
+
+input[type=text]{
+	color:white;
+  font-size:3vmin;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:1vw;
+  margin-bottom:1vw;
+  width: 90%;
+  padding:1vw;
+  display:block;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color:#302b3a;
+}
+
+input[type=submit] {
+  display:block;
+  width: 90%;
+  background-color: red;
+  color: black;
+  font-size:1vw;
+  font-weight:bold;
+  padding: 1vw;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:1vw;
+  margin-bottom:1vw;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: null
+}
+
+
+footer {
+	background-color:white;
+	height:7.8vh;
+	max-height:80px;
+	z-index:0;
+    width: 100%;
+    bottom: 0px;
 }
 
 footer p {
