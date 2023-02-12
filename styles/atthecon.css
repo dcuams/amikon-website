@@ -1,3 +1,8 @@
+* {
+	font-family:candara;
+}
+
+
 html {
 	background-color:white;
     background-color: #302b3a;
@@ -20,9 +25,13 @@ body {
 
 .top-spacer {
 	background-image: linear-gradient(#adadad, #ffffff);
-	height:4vh;
+	height:4vw;
 	max-height:37.5px;
 	min-width:100%;
+	/* SIZE OF TOP NAV CALC RIGHT HERE */
+	margin-top:calc(max(15px, 1.2vw) + 5ex + 1px);
+	position:fixed;
+	z-index:2;
 	
 }
 
@@ -38,7 +47,8 @@ body {
 	padding:0;
 	min-height:40px;
 	width:100vw;
-	
+	position:fixed;
+	z-index:1;
 }
 .topnav a{
     float: left;
@@ -48,7 +58,8 @@ body {
     padding:max(15px, 1.2vw) 1.5vw;
     text-decoration: none;
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Candara;
+	font-size:120%;
 }
 
 .social a{
@@ -91,10 +102,18 @@ a.icon{
 }
 
 .main {
-	height:78.8vh;
+	margin-top:calc(max(15px, 1.2vw) + 5ex - 3px + 4vh);
+	padding-top:2vh;
+	padding-bottom:2vh;
+	height:78.30559vh;
+	width:100vw;
 	z-index:0;
-	flex-grow: 1;
-	overflow:hidden;
+	background-image:url("../img/Body.png");
+	background-repeat:repeat-y;
+	background-size:100%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
 }
 
 .main img{
@@ -110,23 +129,20 @@ a.icon{
 div.content {
 	--width: 75vw;
 	--height: 75vmin;
-	
 	border-radius: 25px;
-	left:calc(50% - calc(var(--width)/2));
-	top:min(calc(50% - calc(var(--height)/2)), 125px);
 	width:var(--width);
-	min-height:var(--height);
+	height:auto;
 	max-height:100%;
 	background-color:#ef48e8;
 	z-index:1;
-	position:absolute;
+	position:static;
 	overflow:grow;
 }
 
 div.header {
 	float:left;
-	display:block;
-	font-size:100%;
+	display:flex;
+	font-size:1.2vw;
 	color: white;
 	text-align:center;
 	margin-top:2vmin;
@@ -134,9 +150,13 @@ div.header {
 	background-color:#302b3a;
 	border-radius:25px;
 	width:30%;
-	height:7.8vw;
+	height:14vh;
 	margin-left:2%;
 	margin-right:1%;
+	justify-content:center;
+	align-items:center;
+	box-shadow: .1vmin .5vmin 1.5vmin 0vmin black;
+	overflow:hidden;
 }
 
 .content div.header:last-child {
@@ -144,8 +164,7 @@ div.header {
 }
 
 .header h1 {
-	margin-top:0vmin;
-	padding-top:calc(2.5vw - 0ex);
+	margin:0;
 } 
 
 div.subcontent {
@@ -185,15 +204,58 @@ footer p {
 }
 
 @media screen and (max-width: 900px) {
+	div.header {
+		float:left;
+		display:left;
+		font-size:1.2vw;
+		color: white;
+		text-align:center;
+		margin-top:2vmin;
+		margin-bottom:0vmin;
+		background-color:#302b3a;
+		border-radius:1vh;
+		width:60%;
+		height:5.5vh;
+		margin-left:2%;
+		margin-right:1%;
+		justify-content:center;
+		align-items:center;
+	}
+	
+	div.content {
+		width:55vw;
+		left:calc(50% - calc(55vw/2));
+		top:min(calc(50% - calc(var(--height)/2) + 4vh), 90px);
+	}
+
+	.content div.header:last-child {
+		margin-left:2%;
+		margin-bottom:2vmin;	
+	}
+	#even {
+		float:right;
+	}
+	
+	.main {
+	height:78.8vh;
+	z-index:0;
+	flex-grow: 1;
+	overflow:hidden;
+}
+}
+
+@media screen and (max-width:750px) {
+	
+	div.content {
+	top:15vh
+	}
+}
+@media screen and (max-width: 1000px) {
   .topnav a:not(.navfirst) {display: none;}
   .topnav a.icon {
-	background-color:grey;
     float: right;
     display: block;
   }
-}
-
-@media screen and (max-width: 900px) {
   .topnav.responsive {
 	position: absolute;
   	z-index:10;

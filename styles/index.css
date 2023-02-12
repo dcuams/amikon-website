@@ -1,3 +1,7 @@
+* {
+	font-family:candara;
+}
+
 html {
 	background-color:white;
     background-color: #302b3a
@@ -5,7 +9,7 @@ html {
 
 body {
 	min-height:100vh;
-	background-color: #302b3a;
+	background-color: white;
 	display:flex;
 	flex-direction:column;
 	margin:0;
@@ -20,9 +24,13 @@ body {
 
 .top-spacer {
 	background-image: linear-gradient(#adadad, #ffffff);
-	height:4vh;
+	height:4vw;
 	max-height:37.5px;
 	min-width:100%;
+	/* SIZE OF TOP NAV CALC RIGHT HERE */
+	margin-top:calc(max(15px, 1.2vw) + 5ex + 1px);
+	position:fixed;
+	z-index:2;
 	
 }
 
@@ -38,7 +46,8 @@ body {
 	padding:0;
 	min-height:40px;
 	width:100vw;
-	
+	position:fixed;
+	z-index:1;
 }
 .topnav a{
     float: left;
@@ -48,7 +57,8 @@ body {
     padding:max(15px, 1.2vw) 1.5vw;
     text-decoration: none;
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Candara;
+	font-size:120%;
 }
 
 .social a{
@@ -91,10 +101,17 @@ a.icon{
 }
 
 .main {
-	height:78.8vh;
+	margin-top:calc(max(15px, 1.2vw) + 5ex - 3px + 4vh);
+	padding-top:2vh;
+	padding-bottom:2vh;
+	height:78.30559vh;
+	width:100vw;
 	z-index:0;
-	flex-grow: 1;
-	overflow:hidden;
+	background-image:url("../img/Body.png");
+	background-repeat:repeat-y;
+	background-size:100%;
+	display:flex;
+	align-items:center;
 }
 
 .main img{
@@ -108,28 +125,31 @@ a.icon{
 }
 
 div.content {
-	--width: 75vmin;
-	--height: 75vmin;
-	
+	--width: 75vw;
+	--height: 75vw;
+	height:80vmin;
+	box-shadow: 0vmin 0vmin 2vmin 1vmin #ef48e8;
 	border-radius: 25px;
-	left:calc(50% - calc(var(--width)/2) + 2.5px);
-	top:calc(50% - calc(var(--height)/2) + 2.5px);
-	float:center;
-	width:(--width);
-	height:(--height);
-	background-color:#ef48e8;
+	width:80vmin;
+	background-color:none;
+	margin-left:auto;
+	margin-right:auto;
 	z-index:1;
-	position:absolute;
 	overflow:hidden;
-	border:5px solid #ef48e8;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:row;
+	flex-wrap: wrap;
 }
 
 .content img {
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
-	width:var(--width);
-	height:var(--height);
+	width:80vmin;
+	height:80vmin;
+	z-index:1;
 }
 
 footer {
@@ -137,8 +157,9 @@ footer {
 	height:7.8vh;
 	max-height:80px;
 	z-index:0;
-    width: 100%;
+    width: 100vw;
     bottom: 0px;
+	overflow:hidden;
 }
 
 footer p {
@@ -148,10 +169,9 @@ footer p {
     color: darkgray;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .topnav a:not(.navfirst) {display: none;}
   .topnav a.icon {
-	background-color:grey;
     float: right;
     display: block;
   }
@@ -170,7 +190,7 @@ footer p {
 	}
 	
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .topnav.responsive {
 	position: absolute;
   	z-index:10;

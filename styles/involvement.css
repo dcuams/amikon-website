@@ -2,6 +2,7 @@
 	font-family:candara;
 }
 
+
 html {
 	background-color:white;
     background-color: #302b3a;
@@ -57,21 +58,19 @@ body {
     padding:max(15px, 1.2vw) 1.5vw;
     text-decoration: none;
     font-size: 16px;
-    font-family: Candara;
+    font-family: candara;
 	font-size:120%;
 }
 
 .social a{
 	float:right;
 	padding:0;
-
 }
-
-
 
 a.icon{
 	padding:calc(15px - 1.24ex);
 }
+
 .topnav img.ico {
 	padding:0;
 	width: 2.2em;
@@ -112,6 +111,7 @@ a.icon{
 	background-size:100%;
 	display:flex;
 	align-items:center;
+	justify-content:center;
 }
 
 .main img{
@@ -121,104 +121,85 @@ a.icon{
     z-index: -1;
     width: 100vw;
 	object-fit: contain;
-	overflow:hidden;		
+	overflow:hidden;	
 }
 
 div.content {
-	--width: 30vw;
-	--height: 78vh;
-	border-radius: 25px;
-	left:calc(50% - calc(var(--width)/2));
-	top:calc(50% - calc(var(--height)/2) + 1vmin);
+	--width: 70vw;
+	--height: 40vw;
+	border-radius: 1vw;
 	width:var(--width);
 	height:var(--height);
-	max-height:var(--height);
-	background-color:#ef48e8;
-	z-index:1;
-	position:absolute;
-	overflow:hidden;
-}
-
-div.header {
-	font-size:3vmin;
-	color: white;
-	text-align:center;
-	margin-top:0px;
-	padding:0px;
+	max-height:70vh;
 	margin-left:auto;
 	margin-right:auto;
-	margin-bottom:4vmin;
+	background-color: none;
+	z-index:1;
+	overflow:grow;
+	display:flex;
+	justify-content: space-around;
+	align-items:center;
+	flex-direction:row;
+	flex-wrap: wrap;
+	border: 2vmin solid #F26FEC;
+}
+
+div.block {
+	--wblock:calc(70vw * .4);
+	float:left;
+	font-size:max(2vw,4px);
+	color: white;
+	margin-top:2vmin;
+	background-color:#302b3a;
+	width:var(--wblock);
+	height:calc(40vw * .4 + 3ex - 5vmin + max(2vw, 4px));
+	max-height:31vh;
+    overflow:visible;
+	margin-bottom:3vmin
+}
+
+.block div {
+	color:black;
+	background-color:white;
+	display:block;
+	z-index:5;
+	width:calc(70vw * .4);
+	height:calc(40vw * .4 - 3ex);
+	box-shadow: 1vmin 1vmin 1vmin 0vmin black;
+	border-radius:1vh;
+	align-items:center;
+	justify-content:center;
+	display:flex;
+}
+
+.block span {
+	font-size:6ex
+}
+
+.block p {
+	font-size:3ex;
+	}
+
+div.subcontent {
+	padding:.5vmin;
+	font-size:max(4.3vmin ,16px);
+	color: white;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
 	background-color:#302b3a;
 	border-radius:25px;
-	width:10em;
-	height:5ex;
+	min-width:10vmin;
+	max-width:90%;
+	min-height:30vmin;
+	margin-bottom:1vmin;
 }
 
-.header h1 {
-	margin-top:2vmin;
+.content p {
+	padding:0;
+	margin:0;
+	font-size:2	vw;
 }
-
-form {
-	height:100%;
-	width:100%;
-}
-
-textarea {
-  color:white;
-  font-size:3vmin;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:1vw;
-  margin-bottom:1vw;
-  width: 90%;
-  height:calc(65% - 9vmin - 3vh - 3vw);
-  padding:1vh 1vw;
-  display:block;
-  border: none;
-  border-radius: 4px;
-  box-sizing: border-box;
-  background-color:#302b3a;
-  resize:none;
-}
-
-input[type=text]{
-  color:white;
-  font-size:3vmin;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:1vw;
-  margin-bottom:1vw;
-  width: 90%;
-  line-height:2vh;
-  padding:1vh 1vw;
-  display:block;
-  border: none;
-  border-radius: 4px;
-  box-sizing: border-box;
-  background-color:#302b3a;
-}
-
-input[type=submit] {
-  display:block;
-  width: 90%;
-  background-color: white;
-  color: black;
-  font-size:1vw;
-  font-weight:bold;
-  padding: 1vw;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:1vw;
-  margin-bottom:1vw;
-  border: none;
-  border-radius: 10vh;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: pink;
-}
-
 
 footer {
 	background-color:white;
@@ -244,50 +225,31 @@ footer p {
   }
 }
 
-@media screen and (max-width:1270px) {
-  div.content {
-	width:60vw;
-	top:calc(50% - calc(68vh/2));
-	left:calc(50% - calc(60vw/2));
-	height:auto;
-  }
-  input[type=text] {
-	  font-size:3vw;
-  }
-  
-  textarea {
-	  height:140vh;
-	  max-height:22vh;
-	  font-size:3vw;
-  }
-    input[type=submit] {
-	  padding: 1vw;
-	  font-size:2vw;
-	  height:auto;
-  }
-}
-
-@media screen and (max-width: 700px) {
+@media screen and (max-width:600px) {
+	
 	div.content {
-	top:calc(50% - calc(60vh/2));
-	left:calc(50% - calc(75vw/2));
-	height:auto;
-	width:75vw;
-  }
-    input[type=text] {
-	  font-size:5vw;
-  }
-      input[type=submit] {
-      margin-bottom:1vh;
-	  padding: 2vw;
-	  font-size:4vw;
-	  height:auto;
-  }
-    textarea {
-	  font-size:5vw;
-  }
+		height:75vw;
+		align-content:unset;
+		border-bottom:14vmin solid #F26FEC;
+		border-top:14vmin solid #F26FEC;
+	}
+	.block div {
+		width:calc(70vw * .46);
+		height:calc(40vw * .48 - 3ex);
+	}
+	div.block {
+		width:calc(70vw * .46);
+		height:calc(40vw * .48 + 3ex - 5vmin + max(2vw, 4px));
+	}
+	
+	.block span {
+	font-size:7ex;
+	}
+	
+	.block p {
+	font-size:3ex;
+	}
 }
-
 @media screen and (max-width: 1000px) {
   .topnav.responsive {
 	position: absolute;
