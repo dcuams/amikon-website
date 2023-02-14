@@ -105,10 +105,11 @@ a.icon{
 	margin-top:calc(max(15px, 1.2vw) + 5ex - 3px + 4vh);
 	padding-top:2vh;
 	padding-bottom:2vh;
+	/* yeah this is prolly a lil unecessary */
 	height:78.30559vh;
 	width:100vw;
 	z-index:0;
-	background-image:url("../img/Body.png");
+	background-image:url("../img/body.png");
 	background-repeat:repeat-y;
 	background-size:100%;
 	display:flex;
