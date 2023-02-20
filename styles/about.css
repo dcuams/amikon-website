@@ -1,7 +1,7 @@
 div.content {
 	--width: 75vw;
 	--height: 75vw;
-	height: 75vmin;
+	max-height: calc(100vh - 7.8vh - 140px);
 	border-radius: 25px;
 	width: 50vw;
 	background-color: #ef48e8;
@@ -41,55 +41,33 @@ div.header {
 
 div.subcontent {
 	padding: .5vmin;
-	font-size: 3.5vmin;
+	font-size: 3vmin;
 	color: white;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #302b3a;
 	border-radius: 25px;
-	min-width: 10vmin;
+	min-width: 10vw;
 	max-width: 90%;
-	min-height: 40vh;
+	overflow:hidden;
 	margin-bottom: 1vmin;
+	
 }
 
 .subcontent p {
-	padding: 0;
+	padding: 4px;
 	margin: 0;
 }
 
-@media screen and (max-width:1100px) {
+@media screen and (max-width:768px) {
 	div.content {
-		height: auto;
-		max-height: 80vh;
-	}
-
-	div.subcontent {
-		overflow: auto;
+		width: min(70vw, calc(100vh - 7.8vh - 140px))
 	}
 }
 
-@media screen and (max-width:1050px) {
-	div.header {
-		margin-bottom: 2vmin;
-	}
-}
-
-@media screen and (max-width:700px) {
+@media screen and (max-width:570px) {
 	div.subcontent {
-		font-size: 1.5em;
-	}
-}
-
-@media screen and (max-width:500px) {
-	div.subcontent {
-		font-size: 1.2em;
-	}
-}
-
-@media screen and (max-width:350px) {
-	div.subcontent {
-		font-size: 1em;
+		font-size:max(.7em,2.5vmin);
 	}
 }

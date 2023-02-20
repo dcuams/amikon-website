@@ -27,7 +27,7 @@ div.content {
 div.block {
 	--wblock: calc(90vw * .2);
 	float: left;
-	font-size: max(2vw, 4px);
+	font-size: max(1.5vw, 4px);
 	color: white;
 	margin: 2vmin;
 	background-color: #302b3a;

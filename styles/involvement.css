@@ -21,7 +21,7 @@ div.content {
 div.block {
 	--wblock: calc(70vw * .4);
 	float: left;
-	font-size: max(2vw, 4px);
+	font-size: max(1.25vw, 4px);
 	color: white;
 	margin-top: 2vmin;
 	background-color: #302b3a;
@@ -29,17 +29,15 @@ div.block {
 	height: calc(40vw * .4 + 3ex - 5vmin + max(2vw, 4px));
 	max-height: 31vh;
 	overflow: visible;
-	margin-bottom: 3vmin
+	margin-bottom: 3vmin;
 }
 
-.block div {
+.block img {
 	color: black;
-	background-color: white;
 	display: block;
 	z-index: 5;
 	width: calc(70vw * .4);
 	height: calc(40vw * .4 - 3ex);
-	box-shadow: 1vmin 1vmin 1vmin 0vmin black;
 	border-radius: 1vh;
 	align-items: center;
 	justify-content: center;
@@ -72,6 +70,7 @@ div.subcontent {
 .content p {
 	padding: 0;
 	margin: 0;
+	padding-left:5%;
 	font-size: 2 vw;
 }
 
