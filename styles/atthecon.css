@@ -3,7 +3,7 @@ div.content {
 	--height: 75vmin;
 	border-radius: 25px;
 	width: var(--width);
-	height: auto;
+	height: calc(100vh - 7.8vh - 140px);
 	max-height: 100%;
 	background-color: #ef48e8;
 	z-index: 1;
@@ -15,15 +15,15 @@ div.content {
 div.header {
 	float: left;
 	display: flex;
-	font-size: 1.2vw;
+	font-size: max(1.2vw,  calc((100vh - 7.8vh - 140px) * .015));
 	color: white;
 	text-align: center;
-	margin-top: 2vmin;
-	margin-bottom: 2vmin;
+	margin-top: calc((100vh - 7.8vh - 140px) * .03);
+	margin-bottom: calc((100vh - 7.8vh - 140px) * .02);
 	background-color: #302b3a;
 	border-radius: 25px;
 	width: 30%;
-	height: 14vh;
+	height: 19%;
 	margin-left: 2%;
 	margin-right: 1%;
 	justify-content: center;
@@ -38,11 +38,11 @@ div.header {
 
 .header h1 {
 	margin: 0;
+	text-align: center;
 }
 
 div.subcontent {
 	padding: .5vmin;
-	font-size: max(4.3vmin, 16px);
 	color: white;
 	text-align: center;
 	margin-left: auto;
@@ -68,17 +68,16 @@ div.subcontent {
 	div.header {
 		float: left;
 		display: left;
-		font-size: 1.2vw;
 		color: white;
 		text-align: center;
-		margin-top: 2vmin;
-		margin-bottom: 0vmin;
+		margin-top: calc((100vh - 7.8vh - 140px) * .008);
+		margin-bottom: 0;
 		background-color: #302b3a;
 		border-radius: 1vh;
 		width: 60%;
-		height: 5.5vh;
+		height: 9%;
 		margin-left: 2%;
-		margin-right: 1%;
+		margin-right: 2%;
 		justify-content: center;
 		align-items: center;
 	}
@@ -95,7 +94,6 @@ div.subcontent {
 	}
 
 	.main {
-		height: 78.8vh;
 		z-index: 0;
 		flex-grow: 1;
 		overflow: hidden;
@@ -106,5 +104,12 @@ div.subcontent {
 
 	div.content {
 		top: 15vh
+	}
+}
+
+@media screen and (max-width:320px) {
+
+	div.header {
+		font-size: .3em;
 	}
 }
