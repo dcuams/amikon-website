@@ -6,8 +6,10 @@
     <meta charset="UTF-8">
     <meta name="description" content="Home section for the Amikon Convention">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/atthecon.css">
     <link rel="shortcut icon" href="img/amilogo.png">
+    <script src="scripts/nav.js"></script>
     <!--
 		
              #made by ur boi CorrupDTA#7930, (I spent my weekend on this ok).
@@ -17,6 +19,7 @@
 </head>
 
 <body>
+    <div class="nav-cont">
     <div class="topnav" id="myTopnav">
         <span class="home"><a class="navfirst" href="index.html">Home</a></span>
         <a href="involvement.html">Get Involved</a>
@@ -26,7 +29,7 @@
         <a href="crew.html"> Our Crew</a>
         <a href="contact.html"> Contact Us</a>
         <!-- why are comments so weird in html -->
-        <div class="social">
+        <div class="social" id="socials">
             <a href="https://www.youtube.com/shorts/NEfs8Ljsmso"> <img src="img/tiktok.png" alt="Tiktok logo"> </a>
             <a href="https://www.facebook.com/amikondublin/"> <img src="img/facebook.png" alt="Facebook logo"> </a>
             <a href="https://twitter.com/AmiKonDublin"> <img src="img/twitter.png" alt="Twitter logo"></a>
@@ -37,10 +40,10 @@
             <img class="ico" src="img/fabar.png" alt="navbar">
         </a>
     </div>
+    <div class="top-spacer"></div>
+</div>
 
     <!-- the body starts here -->
-
-    <div class="top-spacer"></div>
 
     <div class="main">
         <div class="content">
@@ -81,16 +84,6 @@
     <footer>
         <p>&copy;insert copyright info here</p>
     </footer>
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-    </script>
 </body>
 
 </html>
