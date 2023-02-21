@@ -3,7 +3,7 @@ div.content {
 	--height: 40vw;
 	border-radius: 1vw;
 	width: var(--width);
-	height: var(--height);
+	height: min(70vw, calc(100vh - 7.8vh - 140px) *.95);
 	max-height: 70vh;
 	margin-left: auto;
 	margin-right: auto;
@@ -17,16 +17,16 @@ div.content {
 	flex-wrap: wrap;
 	border: 2vmin solid #F26FEC;
 }
-
+/* 302b3a */
 div.block {
 	--wblock: calc(70vw * .4);
 	float: left;
-	font-size: max(1.25vw, 4px);
+	font-size: max(1.25vw, .5em);
 	color: white;
 	margin-top: 2vmin;
 	background-color: #302b3a;
 	width: var(--wblock);
-	height: calc(40vw * .4 + 3ex - 5vmin + max(2vw, 4px));
+	height: calc(min(70vw, calc(100vh - 7.8vh - 140px) *.95) *.4 - 3ex);
 	max-height: 31vh;
 	overflow: visible;
 	margin-bottom: 3vmin;
@@ -37,7 +37,7 @@ div.block {
 	display: block;
 	z-index: 5;
 	width: calc(70vw * .4);
-	height: calc(40vw * .4 - 3ex);
+	height: calc(min(70vw, calc(100vh - 7.8vh - 140px) *.95) *.4 - 3ex);
 	border-radius: 1vh;
 	align-items: center;
 	justify-content: center;
@@ -74,6 +74,12 @@ div.subcontent {
 	font-size: 2 vw;
 }
 
+@media screen and (max-width:370px) {
+	div.block {
+		font-size: .25em
+	}
+}
+/*
 @media screen and (max-width:600px) {
 
 	div.content {
