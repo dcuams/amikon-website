@@ -33,10 +33,14 @@ body {
 
 }
 
-.topnav a:hover {
+.topnav a:hover:not(.soc-img) {
 	color: #e0e0e0;
 	background-color: #5A516D;
 }
+
+.topnav a:active {
+	background-color: #1D1A24;
+  }
 
 .topnav {
 	background-color: #2a2633;
@@ -67,6 +71,11 @@ body {
 .home a:hover {
 	background-color: #F26FEC !important;
 	color: #e0e0e0;
+}
+/*used for current webpage */
+a.current {
+	background-color:#1D1A24;
+	color: rgb(217, 217, 217);
 }
 
 .social a {

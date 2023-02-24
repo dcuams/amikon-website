@@ -17,7 +17,7 @@ div.content {
 	flex-wrap: wrap;
 	border: 2vmin solid #F26FEC;
 }
-/* 302b3a */
+
 div.block {
 	--wblock: calc(70vw * .4);
 	float: left;

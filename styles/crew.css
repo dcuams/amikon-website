@@ -1,7 +1,10 @@
 body {
-	overflow:visible;
+	overflow-y:visible;
 }
-
+ /*fixes overflow on left side of page do to scrollbar */
+img.scrollfix {
+	margin-right:.7vw;
+}
 .main {
 	height: auto;
 }

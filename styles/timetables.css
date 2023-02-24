@@ -1,296 +1,124 @@
-* {
-	font-family: candara;
-}
-
-
-html {
-	background-color: white;
-	background-color: #302b3a;
-}
-
-body {
-	min-height: 100vh;
-	background-color: #302b3a;
-	display: flex;
-	flex-direction: column;
-	margin: 0;
-}
-
-.home a {
-	background-color: #ef48e8;
-}
-
-.home a:hover {
-	background-color: #F26FEC !important;
-}
-
-.top-spacer {
-	background-image: linear-gradient(#adadad, #ffffff);
-	height: 4vw;
-	max-height: 37.5px;
-	min-width: 100%;
-	/* SIZE OF TOP NAV CALC RIGHT HERE */
-	margin-top: calc(max(15px, 1.2vw) + 5ex + 1px);
-	position: fixed;
-	z-index: 2;
-
-}
-
-.topnav a:hover {
-	color: #6E6E6E;
-	background-color: #5A516D;
-}
-
-.topnav {
-	overflow: hidden;
-	background-color: #2a2633;
-	margin: 0;
-	padding: 0;
-	min-height: 40px;
-	width: 100vw;
-	position: fixed;
-	z-index: 1;
-}
-
-.topnav a {
-	float: left;
-	display: block;
-	color: whitesmoke;
-	text-align: center;
-	padding: max(15px, 1.2vw) 1.5vw;
-	text-decoration: none;
-	font-size: 16px;
-	font-family: candara;
-	font-size: 120%;
-}
-
-.social a {
-	float: right;
-	padding: 0;
-}
-
-a.icon {
-	padding: calc(15px - 1.24ex);
-}
-
-.topnav img.ico {
-	padding: 0;
-	width: 2.2em;
-	height: 2.2em;
-}
-
-.topnav img:not(.ico) {
-	float: right;
-	display: block;
-	width: 2vw;
-	height: 2vw;
-	min-width: 34px;
-	min-height: 34px;
-	padding: calc(max(7px, .54vw) + .65px) 1vw;
-	overflow: hidden;
-	background-color: transparent;
-	justify-content: right;
-}
-
-
-.topnav img:hover {
-	background-color: transparent;
-}
-
-.topnav .icon {
-	display: none;
-}
-
-.main {
-	margin-top: calc(max(15px, 1.2vw) + 5ex - 3px + 4vh);
-	padding-top: 2vh;
-	padding-bottom: 2vh;
-	height: 78.30559vh;
-	width: 100vw;
-	z-index: 0;
-	background-image: url("../img/body.png");
-	background-repeat: repeat-y;
-	background-size: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.main img {
-	margin-top: 0px;
-	margin-bottom: 0px;
-	justify-content: center;
-	z-index: -1;
-	width: 100vw;
-	object-fit: contain;
-	overflow: hidden;
-}
-
 div.content {
 	--width: 70vw;
 	--height: 40vw;
 	border-radius: 1vw;
 	width: var(--width);
-	height: var(--height);
-	max-height: 70vh;
+	height:  min(40vw, calc(100vh - 7.8vh - 140px));
 	margin-left: auto;
 	margin-right: auto;
-	background-color: pink;
+	background-color: #302b3a;
 	z-index: 1;
-	overflow: grow;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	flex-wrap: wrap;
 }
 
 div.header {
 	float: left;
 	font-size: max(2vw, 4px);
 	color: white;
-	background-color: #302b3a;
-	background-color: green;
+	background-color: #ef48e8;
 	width: 100%;
-	height: min(calc(40vw * .1666), calc(70vh * .1666));
-	overflow: visible;
+	min-height: calc(min(40vw, calc(100vh - 7.8vh - 140px)) *.2);
+	display:flex;
+	border-color: orange;
+	justify-content: center;
+	align-items: center;
+	border-top-left-radius:1vh;
+	border-top-right-radius:1vh;
 }
 
+/* Divides header functions and table from one another in potrait mode */
 div.divisor {
 	float: left;
 	font-size: max(2vw, 4px);
 	color: white;
 	background-color: #302b3a;
-	background-color: blue;
 	width: 100%;
 	height: 0;
-	overflow: hidden;
+	overflow: hidden;	
 }
 
 div.table {
+	display: flex;
 	float: left;
 	font-size: max(2vw, 4px);
 	color: white;
-	background-color: #302b3a;
-	background-color: red;
-	width: calc(100% - 20px);
-	height: min(calc(40vw * .8333 - 20px), calc(70vh * .8333 - 20px));
-	overflow: hidden;
-	margin: 10px;
+	background-color: #ef48e8;	
+	width: 100%;
+	height:  calc(min(40vw, calc(100vh - 7.8vh - 140px)) *.8);
+	overflow: visible;
+	border-color: yellow;
+	justify-content: center;
+	align-items: center;
+	border-bottom-left-radius:1vh;
+	border-bottom-right-radius:1vh;
 }
 
-.header div {
-	color: black;
-	background-color: white;
+.header-cont {
+	background-color: #ef48e8;
+	color: white;
+	font-size: max(1.7vw, 8px);
+	display: inline;
+	width: calc(70vw *.95);
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	height:100%;
+}
+
+.header-cont p {
+	background-color:#302b3a;
+	padding:1.5% 1%;
+	margin-left:.5%;
+	text-align:center;
+}
+
+.header-cont p:first-child {
+	border-top-left-radius: 1vh;
+	border-bottom-left-radius: 1vh;
+}
+
+.header-cont p:last-child {
+	border-top-right-radius: 1vh;
+	border-bottom-right-radius: 1vh;
+}
+
+.table-cont {
+	background-color: #302b3a;
+	color: white;
 	display: block;
 	z-index: 5;
-	width: calc(70vw * .4);
-	height: calc(40vw * .4 - 3ex);
-	box-shadow: 1vmin 1vmin 1vmin 0vmin black;
+	width: calc(70vw *.95);
+	height: 90%;
 	border-radius: 1vh;
 	align-items: center;
 	justify-content: center;
 	display: flex;
 }
 
-.block span {
-	font-size: 6ex
-}
-
-.block p {
-	font-size: 3ex;
-}
-
-div.subcontent {
-	padding: .5vmin;
-	font-size: max(4.3vmin, 16px);
-	color: white;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #302b3a;
-	border-radius: 25px;
-	min-width: 10vmin;
-	max-width: 90%;
-	min-height: 30vmin;
-	margin-bottom: 1vmin;
-}
-
-.content p {
-	padding: 0;
-	margin: 0;
-	font-size: 2 vw;
-}
-
-footer {
-	background-color: white;
-	height: 7.8vh;
-	max-height: 80px;
-	z-index: 0;
-	width: 100%;
-	bottom: 0px;
-}
-
-footer p {
-	text-align: center;
-	font-size: 12px;
-	font-family: Arial, Helvetica, sans-serif;
-	color: darkgray;
-}
-
-@media screen and (max-width: 1000px) {
-	.topnav a:not(.navfirst) {
-		display: none;
-	}
-
-	.topnav a.icon {
-		float: right;
-		display: block;
-	}
-}
-
-@media screen and (max-width:600px) {
-
+@media screen and (orientation:portrait) {
 	div.content {
-		height: 75vw;
+		display:flex;
+		flex-direction: column;
+		height: calc(100vh - 7.8vh - 140px);
 		align-content: unset;
-		border-bottom: 14vmin solid #F26FEC;
-		border-top: 14vmin solid #F26FEC;
+		flex-wrap: nowrap;
 	}
 
-	.header div {
-		width: calc(70vw * .46);
-		height: calc(40vw * .48 - 3ex);
+	div.divisor {
+		height: calc(calc(100vh - 7.8vh - 140px) *.05);
 	}
 
 	div.header {
-		width: calc(70vw * .46);
-		height: calc(40vw * .48 + 3ex - 5vmin + max(2vw, 4px));
+		width:100%;
+		border-radius:1vh;
+		height:  calc(min(40vw, calc(100vh - 7.8vh - 140px)) *.3)
 	}
 
-	.headr span {
-		font-size: 7ex;
+	.header-cont p {
+		font-size: 2.5vw;
 	}
 
-	.header p {
-		font-size: 3ex;
-	}
-}
-
-@media screen and (max-width: 1000px) {
-	.topnav.responsive {
-		position: absolute;
-		z-index: 10;
-	}
-
-	.topnav.responsive .icon {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-
-	.topnav.responsive a {
-		float: none;
-		display: block;
-		text-align: left;
+	div.table {
+		flex:1 1 auto;
+		border-radius:1vh;
 	}
 }
