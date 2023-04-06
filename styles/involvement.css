@@ -33,7 +33,6 @@ div.block {
 }
 
 .block img {
-	color: black;
 	display: block;
 	z-index: 5;
 	width: calc(70vw * .4);
@@ -42,6 +41,7 @@ div.block {
 	align-items: center;
 	justify-content: center;
 	display: flex;
+	filter:drop-shadow(1.5vmin 1vmin 1.75vmin #73236f);
 }
 
 .block span {
