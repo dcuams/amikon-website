@@ -39,7 +39,9 @@ div.block {
 	height: calc(var(--wblock) + 9ex);
 	min-height: calc(290px + 9ex);
 	overflow: visible;
-	margin-bottom: 6vmin
+	margin-bottom: 6vmin;
+	display:flex;
+	flex-direction: column;
 }
 
 .block img {

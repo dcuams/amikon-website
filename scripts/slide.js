@@ -1,29 +1,12 @@
 let slideIndex = 0;
+let slides = document.getElementsByClassName("slide");
+let i;
+let clicked = false;
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slide");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex-1].style.display = "block";
-}
-
-function autoSlide(n) {
-  let i;
-  let slides = document.getElementsByClassName("slide");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex-1].style.display = "block";
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(autoSlide, 2200); // Change image every 2.2 seconds
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+  clicked = true;
 }
 
 // Thumbnail image controls
@@ -31,12 +14,37 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function showSlides(n) {
+
+  if (n > slides.length) {slideIndex = 1; console.log("Index set to 1!")}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+	console.log("set: " + slides[i] + " to none");
+  }
+  slides[slideIndex-1].style.display = "block";
 }
 
-showSlides(slideIndex);
-autoSlide(slideIndex);
 
 
+function autoSlides() {
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(check, 2500); // Change image every 2 seconds
+}
+
+function check() {
+	if(clicked == true) {
+		clicked = false;
+		setTimeout(check, 4000); //reruns check if there has been a click
+	} else {
+		setTimeout(autoSlides);
+	}
+}
+
+autoSlides();
