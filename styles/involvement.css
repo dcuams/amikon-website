@@ -42,6 +42,11 @@ div.block {
 	justify-content: center;
 	display: flex;
 	filter:drop-shadow(1.5vmin 1vmin 1.75vmin #73236f);
+	transition:.25s;
+}
+
+.block img:hover {
+	filter:drop-shadow(1.5vmin 1vmin 2.75vmin #ff2ef5);
 }
 
 .block span {
