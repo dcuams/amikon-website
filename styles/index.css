@@ -15,6 +15,7 @@ div.content {
 	align-items: center;
 	flex-direction: row;
 	flex-wrap: wrap;
+	background-color:rgb(24, 24, 24);
 }
 
 .content img {

@@ -79,6 +79,10 @@ div.subcontent {
 	font-size: 2 vw;
 }
 
+.content a {
+	color: #4c00ff;
+}
+
 @media screen and (max-width:370px) {
 	div.block {
 		font-size: .25em
