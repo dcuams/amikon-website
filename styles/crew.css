@@ -5,6 +5,7 @@ body {
 img.scrollfix {
 	margin-right:.7vw;
 }
+
 .main {
 	height: auto;
 }
@@ -22,7 +23,6 @@ div.content {
 	overflow: grow;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
@@ -36,59 +36,56 @@ div.block {
 	background-color: #302b3a;
 	width: var(--wblock);
 	min-width: 290px;
-	height: calc(var(--wblock) + 9ex);
-	min-height: calc(290px + 9ex);
+	height:auto;
 	overflow: visible;
-	margin-bottom: 6vmin
+	margin-bottom: 3vmin;
+	display:flex;
+	flex-direction: column;
 }
 
 .block img {
 	display: block;
 	z-index: 5;
-	width: calc(90vw * .2);
-	min-width: 290px;
-	height: calc(90vw * .2);
-	min-height: 290px;
+	height:290px;
+	width:290px;
 	box-shadow: 1vmin 1vmin 1vmin 0vmin black;
 	border-radius: 1vh;
 }
 
 @media screen and (max-width:900px) {
 	div.block {
-		min-width: 140px;
-		min-height: calc(140px + 9ex);
 		font-size: 2ex;
 	}
 
 	.block img {
-		min-width: 140px;
-		min-height: 140px;
+		width: 140px;
+		height: 140px;
 	}
 }
 
 @media screen and (max-width:425px) {
 	div.block {
-		min-width: 130px;
-		min-height: calc(130px + 9ex);
+		max-width: 130px;
+		max-height: calc(130px + 9ex);
 		font-size: 1.7ex;
 	}
 
 	.block img {
-		min-width: 130px;
-		min-height: 130px;
+		width: 130px;
+		height: 130px;
 	}
 }
 
 @media screen and (max-width:390px) {
 	div.block {
-		min-width: 180px;
-		min-height: calc(180px + 9ex);
+		max-width: 180px;
+		max-height: calc(180px + 9ex);
 		font-size: 1.7ex;
 	}
 
 	.block img {
-		min-width: 180px;
-		min-height: 180px;
+		width: 180px;
+		height: 180px;
 	}
 }
 

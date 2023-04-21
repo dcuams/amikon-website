@@ -1,7 +1,23 @@
+body {
+	overflow-y:visible;
+}
+ /*fixes overflow on left side of page do to scrollbar */
+img.scrollfix {
+	margin-right:.7vw;
+}
+.main {
+	height: auto;
+	min-height: calc(100vh - 7.8vh - 140px);
+	flex-direction:column;
+}
+
+div.spacer {
+	height:7vmin;
+}
+
 div.content {
 	--width: 75vw;
 	--height: 75vw;
-	max-height: calc(100vh - 7.8vh - 140px);
 	border-radius: 25px;
 	width: 50vw;
 	background-color: #ef48e8;
@@ -24,7 +40,7 @@ div.header {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 3vh;
+	margin-bottom: 6vmin;
 	background-color: #302b3a;
 	border-radius: 25px;
 	width: 9em;
@@ -52,13 +68,21 @@ div.subcontent {
 	min-width: 10vw;
 	max-width: 90%;
 	overflow:hidden;
-	margin-bottom: 1vmin;
+	margin-bottom: 4vmin;
 	
 }
 
 .subcontent p {
 	padding: 4px;
 	margin: 0;
+}
+
+.subcontent a {
+	color: #4c00ff;
+}
+
+.subcontent a:active {
+	color:rgb(191, 0, 191);
 }
 
 @media screen and (max-width:768px) {
