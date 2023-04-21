@@ -80,7 +80,7 @@ div.subcontent {
 }
 
 .content a {
-	color: #4c00ff;
+	color: blue;
 }
 
 @media screen and (max-width:370px) {
