@@ -24,13 +24,14 @@ div.header {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 6vmin;
+	margin-bottom: 3vh;
 	background-color: #302b3a;
 	border-radius: 25px;
 	width: 9em;
 	height: 5ex;
 	justify-content: center;
 	align-items: center;
+	font-size:max(.7em,2.5vmin)
 }
 
 .header h1 {
@@ -61,12 +62,20 @@ div.subcontent {
 }
 
 @media screen and (max-width:768px) {
+	div.header {
+		margin-bottom:2vh;
+	}
+
 	div.content {
 		width: min(70vw, calc(100vh - 7.8vh - 140px))
 	}
 }
 
 @media screen and (max-width:570px) {
+	div.header {
+		margin-bottom:1vh;
+	}
+
 	div.subcontent {
 		font-size:max(.7em,2.5vmin);
 	}
