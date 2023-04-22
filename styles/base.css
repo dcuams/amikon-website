@@ -30,13 +30,16 @@ body {
 	/* SIZE OF TOP NAV CALC RIGHT HERE */
 	/*margin-top: calc(max(15px, 1.2vw) + 5ex + 1px); */
 	z-index: 2;
-
 }
 
-.topnav a:hover {
+.topnav a:hover:not(.soc-img) {
 	color: #e0e0e0;
 	background-color: #5A516D;
 }
+
+.topnav a:active {
+	background-color: #1D1A24;
+  }
 
 .topnav {
 	background-color: #2a2633;
@@ -67,6 +70,11 @@ body {
 .home a:hover {
 	background-color: #F26FEC !important;
 	color: #e0e0e0;
+}
+/*used for current webpage */
+a.current {
+	background-color:#1D1A24;
+	color: rgb(217, 217, 217);
 }
 
 .social a {
@@ -159,7 +167,7 @@ footer p {
 	color: darkgray;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1180px) {
 	.topnav a:not(.navfirst) {
 		display: none;
 	}
@@ -174,7 +182,7 @@ footer p {
 	}
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1180px) {
 	.topnav.responsive {
 		position: relative;
 		z-index: 10;
