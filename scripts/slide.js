@@ -35,13 +35,13 @@ function autoSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  setTimeout(check, 2500); // Change image every 2 seconds
+  setTimeout(check, 5000); // Change image every 2 seconds
 }
 
 function check() {
 	if(clicked == true) {
 		clicked = false;
-		setTimeout(check, 4000); //reruns check if there has been a click
+		setTimeout(check, 8000); //reruns check if there has been a click
 	} else {
 		setTimeout(autoSlides);
 	}
